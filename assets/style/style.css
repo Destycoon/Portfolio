@@ -26,10 +26,17 @@ body {
 
 /* 🔝 Navigation */
 header {
-    background-color: var(--fond-carte);
+    background-color: rgba(42, 42, 42, 0.9); /* léger fond semi-transparent */
     border-bottom: 1px solid var(--bordure-claire);
     padding: 1rem 2rem;
+    position: fixed;           /* fixe en haut */
+    top: 0;                    /* colle en haut */
+    left: 0;
+    width: 100%;
+    z-index: 1000;             /* toujours au-dessus du reste */
+    backdrop-filter: blur(6px); /* effet de flou derrière (optionnel mais stylé) */
 }
+
 
 nav ul {
     display: flex;
@@ -81,11 +88,12 @@ h3 {
 }
 
 /* ✅ Description (ex sous-titre accueil) */
-#accueil h2 {
+.sous-titre {
     font-size: 1.5rem;
     font-weight: normal;
     color: var(--texte-secondaire);
     margin-top: -1rem;
+    text-align: center;
 }
 
 /* 🟩 Boutons */
@@ -102,7 +110,16 @@ h3 {
 
 .btn:hover {
     background-color: var(--hover-accent);
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
 }
+
+
+.btn:active {
+    transform: scale(0.96);
+    background-color: var(--hover-accent);
+    transition: transform 0.1s ease;
+}
+
 
 /* 🔗 Réseaux sociaux */
 .social-links {
@@ -130,6 +147,9 @@ h3 {
 
 .bio {
     flex: 0 0 auto;
+    border-radius: 15px;
+    border-style: solid , --vert-accent ,  ;
+
 }
 
 .text {
@@ -184,6 +204,7 @@ h3 {
 }
 
 /* Technologies */
+
 .tech-grid {
     display: flex;
     gap: 1rem;
@@ -191,10 +212,22 @@ h3 {
     margin-top: 1rem;
 }
 
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    text-align: center;
+    color: var(--texte-secondaire);
+}
+
 .tech-logo {
-    height: 100px;
+    height: 80px;
+    margin-bottom: 0.5rem;
     filter: brightness(0.9);
 }
+
 
 /* 💼 Projets */
 .projects-grid {
@@ -240,6 +273,11 @@ h3 {
 }
 
 /* ✉️ Contact */
+
+.contact-info {
+    text-align: center;
+}
+
 .contact-info a {
     color: var(--vert-accent);
     text-decoration: none;
@@ -262,4 +300,40 @@ footer {
 :focus {
     outline: 2px solid var(--vert-accent);
     outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about-content, .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card img {
+        height: 180px;
+    }
+}
+
+a:focus {
+    background-color: var(--bordure-claire);
+    border-radius: 4px;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateX(-40px); /* décalage latéral */
+    animation: fadeSlideIn 1.8s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

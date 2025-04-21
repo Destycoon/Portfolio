@@ -7,7 +7,7 @@
     <meta property="og:description" content="Étudiant en informatique passionné par le développement et la cybersécurité.">
 
     <title>Portfolio Swan Terrien</title>
-    <link rel="stylesheet" href="/assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
     <header>
@@ -35,7 +35,7 @@
         </section>
 
         <!-- Section À propos -->
-        <section id="apropos">
+        <section id="apropos" class="fade-in">
             <h2>À propos de moi</h2>
             <div class="about-content">
                 <div class="bio">
@@ -59,17 +59,17 @@
         </section>
 
         <!-- Section Compétences -->
-        <section id="competences">
+        <section id="competences" class="fade-in">
             <h2>Mes Compétences</h2>
             <div class="skills-container" style="flex-direction: row;">
                 <div class="skills-list" style="flex: 1;">
                     <div class="skill-item">
                         <h3>HTML/CSS</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                        <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
                     </div>
                     <div class="skill-item">
                         <h3>Python</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
                     </div>
                     <div class="skill-item">
                         <h3>SQL</h3>
@@ -88,40 +88,47 @@
                 <div class="technologies" style="flex: 1;">
                     <h3>Technologies maîtrisées</h3>
                     <div class="tech-grid">
-                        <img src="assets/image/linux.png" alt="Logo Linux" class="tech-logo">
-                        <img src="assets/image/Pandas.png" alt="Logo Pandas" class="tech-logo">
+                        <div class="tech-item">
+                            <img src="assets/image/linux.png" alt="Logo Linux" class="tech-logo">
+                            <p>Linux</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/image/Pandas.png" alt="Logo Pandas" class="tech-logo">
+                            <p>Pandas</p>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </section>
 
         <!-- Section Projets -->
-        <section id="projets">
+        <section id="projets" class="fade-in">
             <h2>Mes Projets</h2>
             <div class="projects-grid">
                 <article class="project-card">
-                    <a href="#">
+                    <a href="https://github.com/Crehack/Bibliofolio" target="_blank">
                         <img src="assets/image/Bibliofolio.png" alt="Bibliofolio">
                         <h3>Bibliofolio</h3>
                         <p>Un site vitrine de bibliothèque de portfolios</p>
                     </a>
                 </article>
                 <article class="project-card">
-                    <a href="#">
+                    <a href="https://github.com/Crehack/Quadtree" target="_blank">
                         <img src="assets/image/Quadtree.png" alt="Projet Quadtree">
                         <h3>Projet Quadtree</h3>
                         <p>Jeu vidéo codé en Go utilisant la bibliothèque Ebiten</p>
                     </a>
                 </article>
                 <article class="project-card">
-                    <a href="#">
+                    <a href="https://github.com/Crehack/Pong" target="_blank">
                         <img src="assets/image/Pong.png" alt="Pong">
                         <h3>Pong</h3>
                         <p>Le jeu Pong codé en Python avec la bibliothèque Pygame</p>
                     </a>
                 </article>
                 <article class="project-card">
-                    <a href="#">
+                    <a href="https://github.com/Crehack/chief" target="_blank">
                         <img src="assets/image/Chief.png" alt="Chief">
                         <h3>Chief</h3>
                         <p>Un gestionnaire de recettes codé en Kotlin avec Jetpack Compose (toujours en cours)</p>
@@ -131,8 +138,8 @@
         </section>
 
         <!-- Section Contact -->
-        <section id="contact">
-            <h2>Contact</h2>
+        <section id="contact" class="fade-in">
+            <h2>Me contacter</h2>
             <div class="contact-info">
                 <p>Téléphone : <a href="tel:0695860519">06 95 86 05 19</a></p>
                 <p>Email : <a href="mailto:swanterrien35@gmail.com">swanterrien35@gmail.com</a></p>
