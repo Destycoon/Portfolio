@@ -4,151 +4,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Portfolio de Swan Terrien">
-    <meta property="og:description" content="Étudiant en informatique passionné par le développement et la cybersécurité.">
-
-    <title>Portfolio Swan Terrien</title>
+    <meta property="og:description" content="Étudiant en informatique">
     <link rel="stylesheet" href="./assets/style/style.css">
+    <title>Portfolio Swan Terrien</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navigation principale">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li class="nav-item"><a href="#cv" class="nav-link">CV</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#lettre-motivation" class="nav-link">Lettre de motivation</a></li>
+                <li class="nav-item"><a href="#projets-scolaires" class="nav-link">Projets scolaires</a></li>
+                <li class="nav-item"><a href="#experiences-pro" class="nav-link">Expériences professionnelles</a></li>
+                <li class="nav-item"><a href="#projets-personnels" class="nav-link">Projets personnels</a></li>
+                
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <!-- Section Accueil -->
-        <section id="accueil">
-            <h1>Swan Terrien</h1>
-            <p class="sous-titre">Étudiant en BUT Informatique</p>
-            <div class="social-links">
-                <a href="https://github.com/crehack" class="btn" target="_blank" aria-label="GitHub">
-                    <img src="./assets/image/Github.png" alt="GitHub"> GitHub
-                </a>
+
+    <main class="site-main">
+        <!-- Section Introduction -->
+        <div class="profile">
+            <img src="assets/image/Photo.png" alt="Photo de Swan Terrien" class="profile-image">
+            <h1 class="profile-name">Swan Terrien</h1>
+            <p class="profile-title">Étudiant en BUT Informatique</p>
+        </div>
+        <section id="introduction" class="section section-introduction">
+            <h2 class="section-title">Introduction</h2>
+            <div class="section-content">
+                <p>Je suis un jeune de 19 ans passionné d'informatique. J'ai commencé l'informatique à 15 ans et, depuis, je ne cesse d'apprendre et de m'améliorer.</p>
+                <p>J'étudie actuellement l'informatique générale à Polytech Nantes et j'aimerais me tourner plus tard soit vers le développement de jeux, soit vers la cybersécurité.</p>
+                <p><a href="https://github.com/destycoon" target="_blank" class="social-link" aria-label="GitHub de Swan Terrien">GitHub</a></p>
             </div>
         </section>
 
-        <!-- Section À propos -->
-        <section id="apropos" class="fade-in">
-            <h2>À propos de moi</h2>
-            <div class="about-content">
-                <div class="bio">
-                    <img src="assets/image/Photo.png" alt="Photo Swan Terrien">
+        <!-- Section CV -->
+        <section id="cv" class="section section-cv">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <div class="section-content">
+                <div class="cv-block cv-formation">
+                    <h3 class="block-title">Formation</h3>
+                    <ul class="formation-list">
+                        <li class="formation-item">
+                            <img src="assets/image/Polytech.png" alt="Polytech Nantes Logo" class="formation-logo">
+                            <p class="formation-details">BUT Informatique - Polytech Nantes (2024 - Présent)</p>
+                        </li>
+                        <li class="formation-item">
+                            <img src="assets/image/Livet.png" alt="Lycée Eugène Livet Logo" class="formation-logo">
+                            <p class="formation-details">BAC STI2D spécialité SIN - Lycée Eugène Livet (2021 - 2024)</p>
+                        </li>
+                    </ul>
                 </div>
-                <div class="text">
-                    <p>Je suis un jeune de 19 ans passionné d'informatique. J'ai commencé l'informatique à 15 ans et, depuis, je ne cesse d'apprendre et de m'améliorer.</p>
-                    
-                    <div class="details">
-                        <article>
-                            <h3>Formation</h3>
-                            <p>BUT Info1 / Polytech Nantes</p>
-                            <img src="./assets/image/Polytech.png" alt="Logo de Polytech Nantes">
-                            <p>J'y étudie l'informatique générale et j'aimerais me tourner plus tard soit vers le développement de jeux, soit vers la cybersécurité.</p>
-                        </article>
+                <div class="cv-block cv-skills">
+                    <h3 class="block-title">Compétences techniques</h3>
+                    <div class="skills-category">
+                        <h4 class="category-title">Programmation</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <img src="assets/image/html.png" alt="HTML/CSS Logo" class="skill-logo">
+                                HTML/CSS
+                                <span class="skill-progress" style="--progress: 90%"></span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="assets/image/python.png" alt="Python Logo" class="skill-logo">
+                                Python
+                                <span class="skill-progress" style="--progress: 80%"></span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="assets/image/sql.png" alt="SQL Logo" class="skill-logo">
+                                SQL
+                                <span class="skill-progress" style="--progress: 70%"></span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="assets/image/golang.png" alt="Golang Logo" class="skill-logo">
+                                Golang
+                                <span class="skill-progress" style="--progress: 60%"></span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="assets/image/kotlin.png" alt="Kotlin Logo" class="skill-logo">
+                                Kotlin
+                                <span class="skill-progress" style="--progress: 60%"></span>
+                            </li>
+                        </ul>
                     </div>
-        
-                    <a href="./assets/CV.pdf" class="btn">Télécharger mon CV</a>
+                    <div class="skills-category">
+                        <h4 class="category-title">Technologies</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <img src="assets/image/Linux.png" alt="Linux Logo" class="skill-logo">
+                                Linux
+                                <span class="skill-progress" style="--progress: 85%"></span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="assets/image/Pandas.png" alt="Pandas Logo" class="skill-logo">
+                                Pandas
+                                <span class="skill-progress" style="--progress: 75%"></span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="assets/image/windows.png" alt="Windows Logo" class="skill-logo">
+                                Windows
+                                <span class="skill-progress" style="--progress: 90%"></span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="assets/image/office.png" alt="Suite Office Logo" class="skill-logo">
+                                Suite Office
+                                <span class="skill-progress" style="--progress: 80%"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lang-category">
+                        <h4 class="category-title">Langue</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <img src="assets/image/french.png" alt="Français Logo" class="skill-logo">
+                                Français
+                                <span class="skill-progress" style="--progress: 100%"></span>
+                            </li>
+                            <li class="skill-item">
+                                <img src="assets/image/english.png" alt="Anglais Logo" class="skill-logo">
+                                Anglais
+                                <span class="skill-progress" style="--progress: 80%"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cv-block cv-contact">
+                    <h3 class="block-title" id="contact">Contact</h3>
+                    <ul class="contact-list">
+                        <li class="contact-item">Téléphone : <a href="tel:0695860519" class="contact-link">06 95 86 05 19</a></li>
+                        <li class="contact-item">Email : <a href="mailto:swanterrien35@gmail.com" class="contact-link">swanterrien35@gmail.com</a></li>
+                    </ul>
+                </div>
+                <p class="cv-download"><a href="assets/CV.pdf" download="CV_Swan_Terrien.pdf" class="download-link">Télécharger mon CV complet (PDF)</a></p>
+            </div>
+        </section>
+
+        <!-- Section Lettre de motivation -->
+        <section id="lettre-motivation" class="section section-motivation">
+            <h2 class="section-title">Lettre de motivation</h2>
+            <div class="section-content">
+                <p class="motivation-placeholder">[Espace pour votre lettre de motivation personnalisée]</p>
+            </div>
+        </section>
+
+        <!-- Section Projets scolaires -->
+        <section id="projets-scolaires" class="section section-projets-scolaires">
+            <h2 class="section-title">Projets scolaires</h2>
+            <div class="section-content">
+                <div class="projects-block projects-parcours">
+                    <h3 class="block-title">Parcours scolaire</h3>
+                    <p class="parcours-description">Je poursuis actuellement un BUT Informatique à Polytech Nantes, où je développe mes compétences en programmation, gestion de bases de données et technologies émergentes.</p>
+                </div>
+                <div class="projects-block projects-realises">
+                    <h3 class="block-title">Projets réalisés</h3>
+                    <ul class="projects-list">
+                        <li class="project-item">
+                            <a href="https://github.com/Crehack/Quadtree" target="_blank" class="project-link">
+                                <img src="assets/image/Quadtree.png" alt="Projet Quadtree" class="project-image">
+                                <h4 class="project-title">Projet Quadtree</h4>
+                                <p class="project-description">Jeu vidéo codé en Go utilisant la bibliothèque Ebiten.</p>
+                            </a>
+                        </li>
+                        <li class="project-item">
+                            <a href="https://github.com/Crehack/Bibliofolio" target="_blank" class="project-link">
+                                <img src="assets/image/Bibliofolio.png" alt="Bibliofolio" class="project-image">
+                                <h4 class="project-title">Bibliofolio</h4>
+                                <p class="project-description">Un site vitrine de bibliothèque de portfolios.</p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Section Compétences -->
-        <section id="competences" class="fade-in">
-            <h2>Mes Compétences</h2>
-            <div class="skills-container" style="flex-direction: row;">
-                <div class="skills-list" style="flex: 1;">
-                    <div class="skill-item">
-                        <h3>HTML/CSS</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Python</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <h3>SQL</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Golang</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Kotlin</h3>
-                        <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
-                    </div>
-                </div>
-        
-                <div class="technologies" style="flex: 1;">
-                    <h3>Technologies maîtrisées</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <img src="./assets/image/Linux.png" alt="Logo Linux" class="tech-logo">
-                            <p>Linux</p>
-                        </div>
-                        <div class="tech-item">
-                            <img src="./assets/image/Pandas.png" alt="Logo Pandas" class="tech-logo">
-                            <p>Pandas</p>
-                        </div>
-                    </div>
-                    
-                </div>
+        <!-- Section Expériences professionnelles -->
+        <section id="experiences-pro" class="section section-experiences">
+            <h2 class="section-title">Expériences professionnelles</h2>
+            <div class="section-content">
+                <ul class="experiences-list">
+                    <li class="experience-item">
+                        <h3 class="experience-title">Agent de service <span class="experience-date">2024</span></h3>
+                        <p class="experience-environment"><strong>Environnement :</strong> Résidence Léontine Vié</p>
+                        <p class="experience-mission"><strong>Mission principale :</strong> Nettoyage des infrastructures, transport des résidents, service de restauration pour les résidents.</p>
+                        <p class="experience-team"><strong>Travail d'équipe :</strong> Collaboration avec d'autres agents de service pour assurer le bien-être et la sécurité des résidents.</p>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <!-- Section Projets -->
-        <section id="projets" class="fade-in">
-            <h2>Mes Projets</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <a href="https://github.com/Crehack/Bibliofolio" target="_blank">
-                        <img src="./assets/image/Bibliofolio.png" alt="Bibliofolio">
-                        <h3>Bibliofolio</h3>
-                        <p>Un site vitrine de bibliothèque de portfolios</p>
-                    </a>
-                </article>
-                <article class="project-card">
-                    <a href="https://github.com/Crehack/Quadtree" target="_blank">
-                        <img src="./assets/image/Quadtree.png" alt="Projet Quadtree">
-                        <h3>Projet Quadtree</h3>
-                        <p>Jeu vidéo codé en Go utilisant la bibliothèque Ebiten</p>
-                    </a>
-                </article>
-                <article class="project-card">
-                    <a href="https://github.com/Crehack/Pong" target="_blank">
-                        <img src="./assets/image/Pong.png" alt="Pong">
-                        <h3>Pong</h3>
-                        <p>Le jeu Pong codé en Python avec la bibliothèque Pygame</p>
-                    </a>
-                </article>
-                <article class="project-card">
-                    <a href="https://github.com/Crehack/chief" target="_blank">
-                        <img src="assets/image/Chief.png" alt="Chief">
-                        <h3>Chief</h3>
-                        <p>Un gestionnaire de recettes codé en Kotlin avec Jetpack Compose (toujours en cours)</p>
-                    </a>
-                </article>
-            </div>
-        </section>
-
-        <!-- Section Contact -->
-        <section id="contact" class="fade-in">
-            <h2>Me contacter</h2>
-            <div class="contact-info">
-                <p>Téléphone : <a href="tel:0695860519">06 95 86 05 19</a></p>
-                <p>Email : <a href="mailto:swanterrien35@gmail.com">swanterrien35@gmail.com</a></p>
+        <!-- Section Projets personnels -->
+        <section id="projets-personnels" class="section section-projets-personnels">
+            <h2 class="section-title">Projets personnels & Passions</h2>
+            <div class="section-content">
+                <div class="projects-block projects-personnels">
+                    <h3 class="block-title">Projets personnels</h3>
+                    <ul class="projects-list">
+                        <li class="project-item">
+                            <a href="https://github.com/Crehack/chief" target="_blank" class="project-link">
+                                <img src="assets/image/Chief.png" alt="Chief" class="project-image">
+                                <h4 class="project-title">Chief</h4>
+                                <p class="project-description">Un gestionnaire de recettes codé en Kotlin avec Jetpack Compose (en cours).</p>
+                            </a>
+                        </li>
+                        <li class="project-item">
+                            <a href="https://github.com/Crehack/Pong" target="_blank" class="project-link">
+                                <img src="assets/image/Pong.png" alt="Pong" class="project-image">
+                                <h4 class="project-title">Pong</h4>
+                                <p class="project-description">Le jeu Pong codé en Python avec la bibliothèque Pygame.</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="projects-block projects-passions">
+                    <h3 class="block-title">Passions</h3>
+                    <ul class="passion-list">
+                        <li class="passion-item">
+                            <h4 class="passion-title">Création de bijoux cote de maille</h4>
+                            <p class="passions-description">Passionné par la création de bijoux pour la plupart en cote de maille à destination de famille ou d'amis avec notament un projet de haubert en cours</p>
+                        </li>
+                        <li class="passion-item">
+                            <h4 class="passion-title">Programmation</h4>
+                            <p class="passions-description">J'explore les différent domaine de la programmation et du développement avec des projet varié allant des application en interface de commande, a des jeux vidéos, et bientôt un réseau de neurones</p>
+                        </li>
+                        <li class="passion-item">
+                            <h4 class="passion-title">Boxe</h4>
+                            <p class="passions-description">j'ai pratiqué la boxe et d'autres sport de combat pendant de nombreuse année j'ai arreter suite a des probleme d'emploi du temps mais je compte reprendre dès que possible</p>
+                        </li>
+                        <li class="passion-item">
+                            <h4 class="passion-title">cybersécurité</h4>
+                            <p class="passions-description">
+                                je ne m'y intéresse que depuis peu et je n'ai pas beaucoup d'experience dans le domaine mais j'apprecie apprendre et chercher des réponses sur le sujet notament auprès de connaissance quasi-experte dans le domaine
+                            </p>
+                        </li>
+                    </ul>
+                   
+                </div>
             </div>
         </section>
     </main>
-    
-    <footer>
-        <p>&copy; 2025 Swan Terrien - Tous droits réservés</p>
+
+    <footer class="site-footer">
+        <p class="footer-text">© 2025 Swan Terrien - Tous droits réservés</p>
     </footer>
 </body>
 </html>
