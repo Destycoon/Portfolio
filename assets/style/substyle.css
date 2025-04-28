@@ -1,0 +1,383 @@
+/* 🎨 Palette principale */
+:root {
+    --fond: #1C2526;
+    --card-bg: #2E3537;
+    --texte-principal: #E5E7EB;
+    --texte-secondaire: #A3BFFA;
+    --title-accent: #60A5FA;
+    --subtitle-accent: #A78BFA;
+    --bordure-glow: #4B6EFA;
+    --hover-blue: #7DB3FA;
+    --hover-purple: #C4B5FD;
+}
+
+/* 🔄 Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌐 Corps */
+html {
+    scroll-padding-top: 20px;
+}
+
+body {
+    background: linear-gradient(45deg, var(--fond) 0%, #2a3133 50%, var(--card-bg) 100%);
+    background-size: 200% 200%;
+    animation: backgroundShift 15s ease-in-out infinite;
+    color: var(--texte-principal);
+    font-family: 'Orbitron', Arial, sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Animation du fond */
+@keyframes backgroundShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Importation de la police Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Flèche de retour */
+.project-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-arrow {
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--title-accent);
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: color 0.3s, transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.back-arrow:hover {
+    color: var(--hover-purple);
+    transform: translateX(-5px);
+    border-color: var(--hover-purple);
+    box-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+}
+
+.back-arrow span {
+    display: inline-block;
+}
+
+/* 📄 Contenu principal */
+.site-main {
+    max-width: 1100px;
+    margin: 80px auto 0 auto;
+    padding: 2rem;
+}
+
+/* Sections */
+.section {
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--bordure-glow);
+    box-shadow: 0 0 15px rgba(75, 110, 250, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--title-accent);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-shadow: 0 0 5px var(--title-accent);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: var(--subtitle-accent);
+    margin: 0.75rem auto;
+    border-radius: 2px;
+}
+
+.block-title {
+    font-size: 1.6rem;
+    color: var(--subtitle-accent);
+    margin-bottom: 1.2rem;
+    text-align: left;
+    text-shadow: 0 0 5px var(--subtitle-accent);
+}
+
+/* Animation d'entrée */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Détails des projets */
+.project-details .project-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-details .project-image {
+    display: block;
+    margin: 0 auto 2rem;
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid var(--bordure-glow);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(75, 110, 250, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-details .project-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(75, 110, 250, 0.5);
+}
+
+.project-details .project-description,
+.project-details .project-features {
+    margin-bottom: 2.5rem;
+    background-color: rgba(75, 110, 250, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(75, 110, 250, 0.2);
+}
+
+.project-details .project-description p,
+.project-details .project-features p {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.project-details .features-list {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.project-details .features-list li {
+    position: relative;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--texte-secondaire);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.project-details .features-list li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--title-accent);
+    font-size: 1rem;
+}
+
+.project-details .features-list li:hover {
+    color: var(--texte-principal);
+    transform: translateX(5px);
+}
+
+.project-details .project-technologies {
+    margin-bottom: 2.5rem;
+}
+
+.project-details .skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.project-details .skill-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(75, 110, 250, 0.1);
+    padding: 0.75rem 1.25rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: var(--texte-principal);
+    border: 2px solid var(--bordure-glow);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.project-details .skill-item:hover {
+    background-color: var(--hover-blue);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(75, 110, 250, 0.4);
+}
+
+.project-details .skill-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.75rem;
+    object-fit: contain;
+    border: 1px solid var(--bordure-glow);
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.project-details .skill-item:hover .skill-logo {
+    transform: scale(1.1);
+}
+
+/* Lien GitHub */
+.github-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.github-link {
+    display: inline-block;
+    background-color: var(--subtitle-accent);
+    color: var(--texte-principal);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
+}
+
+.github-link:hover {
+    background-color: var(--hover-purple);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
+}
+
+.github-link:active {
+    transform: scale(0.95);
+}
+
+/* Pied de page */
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(180deg, var(--fond) 0%, var(--card-bg) 100%);
+    color: var(--texte-secondaire);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--bordure-glow);
+}
+
+/* Accessibilité */
+:focus {
+    outline: 3px solid var(--title-accent);
+    outline-offset: 3px;
+}
+
+a:focus {
+    background-color: rgba(96, 165, 250, 0.2);
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-main {
+        margin-top: 60px;
+        padding: 1.5rem;
+    }
+
+    .section {
+        padding: 2rem 1.5rem;
+    }
+
+    .project-details .project-image {
+        max-height: 300px;
+    }
+
+    .project-details .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-details .skill-logo {
+        width: 22px;
+        height: 22px;
+    }
+
+    .project-back {
+        top: 15px;
+        left: 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .block-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        scroll-padding-top: 20px;
+    }
+
+    .site-main {
+        margin-top: 50px;
+        padding: 1rem;
+    }
+
+    body {
+        animation: backgroundShift 20s ease-in-out infinite;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .block-title {
+        font-size: 1.3rem;
+    }
+
+    .project-details .project-image {
+        max-height: 200px;
+    }
+
+    .back-arrow {
+        font-size: 1.5rem;
+        padding: 0.3rem;
+    }
+
+    .project-details .skill-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .project-back {
+        top: 10px;
+        left: 10px;
+    }
+
+    .github-link {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .project-details .features-list li {
+        font-size: 0.9rem;
+    }
+}
