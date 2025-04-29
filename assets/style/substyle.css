@@ -1,4 +1,4 @@
-/* 🎨 Palette principale */
+
 :root {
     --fond: #1C2526;
     --card-bg: #2E3537;
@@ -11,14 +11,14 @@
     --hover-purple: #C4B5FD;
 }
 
-/* 🔄 Reset de base */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 🌐 Corps */
+
 html {
     scroll-padding-top: 20px;
 }
@@ -33,7 +33,7 @@ body {
     font-size: 16px;
 }
 
-/* Animation du fond */
+
 @keyframes backgroundShift {
     0% {
         background-position: 0% 50%;
@@ -46,10 +46,9 @@ body {
     }
 }
 
-/* Importation de la police Orbitron */
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-/* Flèche de retour */
 .project-back {
     position: absolute;
     top: 20px;
@@ -78,14 +77,14 @@ body {
     display: inline-block;
 }
 
-/* 📄 Contenu principal */
+
 .site-main {
     max-width: 1100px;
     margin: 80px auto 0 auto;
     padding: 2rem;
 }
 
-/* Sections */
+
 .section {
     padding: 2.5rem 2rem;
     margin-bottom: 2.5rem;
@@ -126,7 +125,7 @@ body {
     text-shadow: 0 0 5px var(--subtitle-accent);
 }
 
-/* Animation d'entrée */
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -134,7 +133,7 @@ body {
     }
 }
 
-/* Détails des projets */
+
 .project-details .project-content {
     max-width: 900px;
     margin: 0 auto;
@@ -243,7 +242,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Lien GitHub */
+
 .github-container {
     text-align: center;
     margin: 2rem 0;
@@ -282,7 +281,7 @@ body {
     border-top: 1px solid var(--bordure-glow);
 }
 
-/* Accessibilité */
+
 :focus {
     outline: 3px solid var(--title-accent);
     outline-offset: 3px;
@@ -293,7 +292,7 @@ a:focus {
     border-radius: 5px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .site-main {
         margin-top: 60px;
